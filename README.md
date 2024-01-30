@@ -7,11 +7,13 @@ Should have below tools installed
     Node (version 18 or above)
     npm (version 9 or above)
 
-
 ## Step 2 - Clone the git repositiory 
 
 Run below command in gitbash (available in vs code terminal post installing git )
     git clone https://github.com/anamikarajawat/crud_operation
+
+or you can download repo zip file from below url (download option you will get in a green button named - code)
+https://github.com/anamikarajawat/crud_operation
 
 ### Step 3 - Install/update project dependecies 
 
