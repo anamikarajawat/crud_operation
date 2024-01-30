@@ -11,7 +11,7 @@ const Edit = () => {
     let prr = useParams()
     let navi = useNavigate()
     useEffect(() => {
-        axios.get(`http://localhost:3000/User/${prr.ab}`)
+        axios.get(`http://localhost:3000/usersData/${prr.ab}`)
             .then((re) => {
                 setName(re.data.name);
                 setEmail(re.data.email);
@@ -38,7 +38,7 @@ const Edit = () => {
             email: email,
             dob: dob
         }
-        axios.put(`http://localhost:3000/User/${prr.ab}`, payload)
+        axios.put(`http://localhost:3000/usersData/${prr.ab}`, payload)
 
         navi('/user')
     }

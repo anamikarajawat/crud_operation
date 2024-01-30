@@ -1,70 +1,81 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Step 1 - prerequisite setup to run this crud operations app
 
-## Available Scripts
+Should have below tools installed 
+    VS code
+    Git
+    Node (version 18 or above)
+    npm (version 9 or above)
 
-In the project directory, you can run:
 
-### `npm start`
+## Step 2 - Clone the git repositiory 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Run below command in gitbash (available in vs code terminal post installing git )
+    git clone https://github.com/anamikarajawat/crud_operation
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Step 3 - Install/update project dependecies 
 
-### `npm test`
+Run below command in vs code terminal
+    npm install or npm i (You may get few warnings related to dependencies just ignore them)
+    
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Step 4 - Run the database file in app 
+Run below command in vs code terminal 
+    npx json-server Backend\db.json
 
-### `npm run build`
+    Note - You need to execute above command in seperate terminal and let it be running until you are using the application. Post running this command you will get an output such as below -
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    Loading Backend\db.json
+    Done
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    Resources
+    http://localhost:3000/usersData
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    Home
+    http://localhost:3000
 
-### `npm run eject`
+##### Step 5 - Launch the application
+Open a seperate terminal in vs code and Run below command
+    npm start
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    Note- While running this command if you get a prompt as port is already in use do you want to select another port then type y or yes to launch the app on another port as default port 3000 we are already running db json file to add, edit, delete, store user data.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### `After running npm start command application will be auto launched if in case it doesn't then access below urls` 
+Open [http://localhost:3000](http://localhost:3000) OR [http://localhost:3001](http://localhost:3001) to view app in your browser.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### These crud operation we have done using react. Sql queries to create, select, update, delete any data writing below for your reference -
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# CREATE THE TABLE
 
-## Learn More
+CREATE TABLE Register
+(
+UserId int PRIMARY KEY,
+Name varchar(20) NOT NULL,
+Email varchar(30) NOT NULL,
+DateOfBirth DATE,
+)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# UPADATE THE TABLE
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+UPDATE Register SET Name='Sample'
+WHERE userId = 1;
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# DELETE 
 
-### Analyzing the Bundle Size
+DELETE FROM Regiter WHERE 
+Name = 'Exampleuser';
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+# SELECT
 
-### Making a Progressive Web App
+# To select all the data from table
+1. SELECT * FROM Register
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+# To get a paricular row
+2. SELECT Name,DateOfBirth FROM Register WHERE
+userId ==1;
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

@@ -1,23 +1,29 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
-import { Link,  } from "react-router-dom"
+import { Link, } from "react-router-dom"
 import style from './Home.module.css'
 
 const User = () => {
 
     let [data, setData] = useState([])
-    // let navi=useNavigate()
 
     useEffect(() => {
-        axios.get("http://localhost:3000/User")
-            .then((resp) => { setData(resp.data) })
+        setTimeout(() => {
+            axios.get(`http://localhost:3000/usersData`)
+                .then((resp) => { setData(resp.data) })
+        }, 500)
     }, [])
 
     let Delete = (x) => {
-        axios.delete(`http://localhost:3000/User/${x}`)
-        // navi=('/user')
-        window.location.assign('/user')
+        axios.delete(`http://localhost:3000/usersData/${x}`)
+        setTimeout(() => {
+            axios.get(`http://localhost:3000/usersData`).then(res => {
+                setData(res.data)
+                console.log('delete schedule data ', res.data)
 
+            })
+        }, 500)
+        
     }
     return (
         <div id={style.userHome}>

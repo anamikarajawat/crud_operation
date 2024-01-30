@@ -34,7 +34,7 @@ const Create = () => {
             email: email,
             dob: dob
         }
-        axios.post("http://localhost:3000/User", obj)
+        axios.post(`http://localhost:3000/usersData`, obj)
             .then(() => { console.log("Dtaa has beeen stored"); })
             .catch(() => { console.log("Errroooooorrrrr"); })
 

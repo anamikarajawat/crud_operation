@@ -1,3 +1,16 @@
 {
-  "User": []
+  "usersData": [
+    {
+      "name": "Sampleuser",
+      "email": "sampleuser@gmail.com",
+      "dob": "2012-09-23",
+      "id": 1
+    },
+    {
+      "name": "Testuser",
+      "email": "testuser@gmail.com",
+      "dob": "2003-09-29",
+      "id": 2
+    }
+  ]
 }
