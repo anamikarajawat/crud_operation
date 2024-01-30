@@ -1,0 +1,161 @@
+*{
+    padding: 0px;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#Homepage{
+    height: 15vh;
+    width: 100%;
+    background-color: black;
+    border-bottom: 2px solid white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#Homepage>a{
+    text-decoration: none;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    text-shadow: 0px 0px 10px white;
+}
+
+
+#myform{
+    height: 85vh;
+    width: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#myform>.formcontent{
+    height: 400px;
+    width: 300px;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px snow;
+    line-height: 2;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+
+}
+
+h5{
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-weight: 200;
+    font-size: medium;
+    text-shadow: 0px 0px 10px white;
+}
+
+#myform>.formcontent>input{
+    padding: 10px;
+    background-color: black;
+    border-bottom: 1px solid white;
+    color: white;
+    text-shadow: 0px 0px 10px white;
+    box-shadow: 0px 0px 10px white;
+
+}
+
+
+#myform>.formcontent>input>:focus{
+    outline: none;
+    color: white;
+}
+
+#myform>.formcontent>button{
+    margin-top: 10px; 
+    /* height: 300px; */
+    width: 100px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px solid white;
+    background-color: transparent;
+    color: white;
+
+}
+
+
+#myform>.formcontent>button:focus {
+    /* background-color: #49636c; */
+    color: white;
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.5s;
+  }
+
+#userpage{
+    height: 88vh;
+    width: 100%;
+    background-color: black;
+    color: white;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    
+}
+#userpage>.content{
+    height: 300px;
+    width: 300px;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* background-color: brown; */
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-size: larger;
+    display: flex;
+    flex-direction: column;
+}
+
+#userHome{
+    height: 89vh;
+    width: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#userHome>.user{
+    height: 280px;
+    width: 300px;
+    box-shadow: 0px 0px 15px white;
+    border: none;
+    border-radius: 25px;
+    /* display: flex;*/
+    /* justify-content: center;  */
+}
+
+#userHome>.user>table>tr>td,th{
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    padding: 10px;
+}
+#userHome>.user>table>tr>td>button{
+    height: 25px;
+    width: 90px;
+    background-color: black;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px white;
+    padding: 5px;
+    color: white;
+}
+
+#userHome>.user>table>tr>td>button:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 1s;
+}
+
+#userHome>.user>table>tr>td>button>a{
+    color: white;
+    text-decoration: none;
+}
